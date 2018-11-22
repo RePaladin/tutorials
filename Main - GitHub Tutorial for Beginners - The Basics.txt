@@ -1,0 +1,54 @@
+From Academind (YouTube)
+
+GitHub Tutorial for Beginners - The Basics.
+GitHub allows us to save our code on the web.
+
+Create the project folder and add the desired files
+Use "git init"
+    "git add ."
+    "git commit -m "hello""
+
+Now lets get this to a remore repository
+
+Create a GitHub account or log in.
+Select "Create new repository"
+Select a name
+    Create repository
+Connect to the desired repository
+    git remote add origin https://github.com/USERNAME/REPO_NAME
+
+See the name of the remote repository and the URL
+    git remote -v
+
+Up to this point our commits haven't been pushed to the remote repository.
+Push our local branches to the remote repository (using -u allows us to)
+    git push -u origin master
+
+After this you may be prompted to enter your username and password.
+Then you will see that the code got pushed up.
+
+Search for "Caching your GitHub password in Git" so you don't have to enter your password every time.
+
+Clone or download.
+Copy the link and create a folder where we will put our repository
+To download or clone the entire content of the remote repository use
+    git clone linkOfRepo
+
+Add a new dummy file, this change is saved locally
+To push it to the remote repository use
+    git push
+
+There are two options to download the latest changes in a repository.
+    #1
+    Using
+        git fetch
+    With it we can see that there have been changes made, but our code locally won't reflect these changes.
+
+    #2
+    Using
+        git pull
+    Will download the changes and automatically will merge the remote with your local repository.
+
+To cut the connection to a remote repository
+    git remote
+    git remote rm nameOfConnectedRepo
