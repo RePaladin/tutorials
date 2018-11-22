@@ -1,0 +1,76 @@
+From Academind (YouTube)
+
+Version Control System.
+Git and GitHub are NOT the same.
+    Git: Version Control System, local tool that can be downloaded.
+    GitHub: Hosting and collaboration provider, web-based solution.
+
+You can work locally with Git.
+GitHub is the hosting provider.
+
+Repository
+    The location where your code history is stored.
+
+Branch
+    "Folder" within the repository containing commits.
+
+Commits
+    Different stages of your code inside a branch.
+
+First download the latest version of Git.
+Git is run with the command line, or integrated terminal from your code editor. It does not come with a GUI.
+
+Navigate to your project folder and type to initialize
+    git init
+
+To see the current status of the project
+    git status
+
+To track files
+    git add .
+
+We can also use something like
+    git add index.html
+
+This will "stage" our specified files
+To commit a new version of our code (that we can go back to) use
+    git commit -m "Desired message or name"
+
+After that we may use "git status" and see that there is nothing to commit, our working tree is clean
+
+To see our current branch
+    git branch
+
+After making any changes use "git add ." and "git commit -m "44 lines of text"
+
+If we use "git log" we can see our previous commits.
+
+Git does not create copies of everything, it just saves the changes of the files it tracks.
+
+Whenever you create a new commit, this one will be the "HEAD" in your branch.
+If you want to go to a previous commit, use "git log", copy the desired id and use
+    git checkout idOfDesiredCommit
+    This will then become the HEAD of the branch, it is no longer part of the master branch. You can use this feature to check where something might have gone wrong but if you would like to commit this file, you woulnd't be able to. But how can you go back? Go to the last commit using 
+        "git master"
+        Select the commit you want to jump back to and use
+            git reset --hard idOfDesiredCommit
+
+        Note that this will DELETE all changes commited after this commit.
+
+If you made changes to a file, but did not use "git add ." so there are only "unstaged" changes and want to go to the previous state enter
+    git checkout -- .
+
+If you want to add new features without modifying the master branch we can use "branches"
+Create a new branch
+    git checkout -b -nameOfBranch
+
+Use "git branch" to display branches and our current directory
+
+To change branches use
+    git checkout nameOfBranch
+
+To merge branches (from the master branch)
+    git merge nameOfBranchToMerge
+
+To delete a branch
+    git branch -D nameOfBranchToDelete
